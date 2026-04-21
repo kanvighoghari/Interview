@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
 
 app.use(cors({
-    origin :"http://localhost:5173",
+    origin :"https://interview-frontend-1gcr.onrender.com",
     credentials:true
 }))
 app.use(express.json())
