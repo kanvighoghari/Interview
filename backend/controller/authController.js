@@ -29,7 +29,8 @@ export const googleAuth = async (req,res)=>{
         res.status(200).json({
             id : newUser._id ,
             name: newUser.name ,
-            email : newUser.email
+            email : newUser.email,
+            credits: user.credits 
         })
 
    }catch(error){
@@ -39,6 +40,10 @@ export const googleAuth = async (req,res)=>{
 }
 
 export const logout = (req, res)=>{
-    res.clearCookie("token" ,{maxAge:0})
+    res.clearCookie("token", {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none"
+})
     res.status(200).send("user logged out successfullyy")
 }

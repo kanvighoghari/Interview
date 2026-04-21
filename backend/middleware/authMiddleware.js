@@ -22,7 +22,7 @@ import userModel from "../models/userModel.js"
     next()
 
  }catch(error){
-    console.log("error in protected route middleware: " , err)
+    console.log("error in protected route middleware: " , error)
     res.status(500).json({message:"Internal Server error"})
    }
 
