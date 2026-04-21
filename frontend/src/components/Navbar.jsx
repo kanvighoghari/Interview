@@ -82,7 +82,7 @@ const Navbar = () => {
                     }
                 }}
                 className='w-9 h-9 bg-black text-white rounded-full flex items-center  justify-center font-semibold '>
-                    {userData? userData?.name.slice(0,1).toUpperCase() : <FaUserAstronaut /> }
+                    {userData? userData?.name?.slice(0,1).toUpperCase() : <FaUserAstronaut /> }
                 </button>
                 {showUser && (
                     <div className='absolute right-0 mt-1 w-48  bg-white shadow-xl border border-gray-200 rounded-xl p-3 z-50 '>
